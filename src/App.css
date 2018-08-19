@@ -1,0 +1,113 @@
+header {
+  text-align: center;
+  padding:20px 0px;
+  font-size: 30px;
+}
+
+.game{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu{
+  list-style: none;
+  font-size: 20px;
+}
+
+.menu li{
+  cursor: pointer;
+}
+
+
+.menu li:hover{
+  list-style: initial;
+}
+
+.info{
+  text-align: center;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  margin: 0px 60px;
+}
+.ships-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  transform: rotateY(25deg);
+}
+
+.ships-grid__field {
+  width: 8.33%;
+  height: 8.33%;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ships-grid__boat {
+  background-color: black;
+}
+
+.ships-grid__hit {
+  color:red;
+  font-size: 25px;
+}
+
+.ships-grid__miss {
+  color:rgba(0, 89, 255, 0.856);
+  font-size: 25px;
+}
+
+.shots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  transform: rotateY(-25deg);
+}
+
+.shots-grid__field {
+  width: 8.33%;
+  height: 8.33%;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shots-grid__field:hover{
+  background-color: blue;
+}
+
+.shots-grid__button {
+  width: 100%;
+  height: 100%;
+  background-color:transparent;
+  border:none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.shots-grid__button:disabled {
+  cursor:not-allowed;
+}
+
+.shots-grid__hit {
+  color:red;
+
+}
+
+.shots-grid__miss {
+  color:rgba(0, 89, 255, 0.856);
+}
+
+.scores{
+  margin: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+}
