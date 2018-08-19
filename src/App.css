@@ -18,7 +18,6 @@ header {
   cursor: pointer;
 }
 
-
 .menu li:hover{
   list-style: initial;
 }
@@ -99,7 +98,6 @@ header {
 
 .shots-grid__hit {
   color:red;
-
 }
 
 .shots-grid__miss {

@@ -75,7 +75,6 @@ class Game extends Component {
                         <h2>Computer</h2>
                         <h3>{scoreComputer}/17 punten</h3>
                         <h3>{feedbackComputer}</h3>
-                        
                     </div>
                 </div>
            </div>
