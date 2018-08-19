@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import * as request from 'superagent'
+import {baseUrl} from '../constants'
 
 class Game extends Component {
     state = {}
     
     async componentDidMount() {
         try {
-            const response = await request.get(`http://localhost:4000/games/${this.props.match.params.id}`)
+            const response = await request.get(`${baseUrl}/games/${this.props.match.params.id}`)
             this.setState({...response.body}) 
         }
         catch(error){ console.log(error) } 
@@ -15,7 +16,7 @@ class Game extends Component {
     newMove = async (coordinate) => {
         try {
             const response = await request
-                .post(`http://localhost:4000/games/${this.props.match.params.id}`)
+                .post(`${baseUrl}/games/${this.props.match.params.id}`)
                 .send({coordinate})
             
                 console.log(response.body);

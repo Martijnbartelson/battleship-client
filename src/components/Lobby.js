@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import * as request from 'superagent'
+import {baseUrl} from '../constants'
 
 class Lobby extends Component {
     
     newGame = async () => {
         const { history } = this.props
         try {
-            const response = await request.post('http://localhost:4000/games')
+            const response = await request.post(`${baseUrl}/games`)
             history.push(`/games/${response.body.id}`)  
         }
         catch(error){ console.log(error) } 
